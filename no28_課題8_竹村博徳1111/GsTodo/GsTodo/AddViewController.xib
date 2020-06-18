@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="GsTodo" customModuleProvider="target">
+            <connections>
+                <outlet property="memoTextView" destination="9Vy-AA-U8d" id="ucr-Gj-8vB"/>
+                <outlet property="titleTextField" destination="Rkc-OP-8Zu" id="5oJ-g6-lUO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRo-Hi-QAW">
+                    <rect key="frame" x="17" y="103" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="タイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-OP-8Zu" customClass="HoshiTextField" customModule="TextFieldEffects">
+                    <rect key="frame" x="17" y="43" width="342" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="U1W-ji-t7c"/>
+                        <constraint firstAttribute="width" constant="342" id="cdy-LQ-GhJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" red="0.33790959206033144" green="0.66666668653488159" blue="0.60927719053623997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylH-nG-GQl">
+                    <rect key="frame" x="16" y="14" width="90" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="2qw-3I-KnV"/>
+                        <constraint firstAttribute="height" constant="21" id="QO3-tr-Q7r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Vy-AA-U8d">
+                    <rect key="frame" x="17" y="190" width="343" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="bmY-Bh-CS8"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ylH-nG-GQl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="2qS-Mr-96h"/>
+                <constraint firstItem="9Vy-AA-U8d" firstAttribute="leading" secondItem="RRo-Hi-QAW" secondAttribute="leading" id="8tC-l4-aWZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9Vy-AA-U8d" secondAttribute="bottom" constant="357" id="ILs-vw-JvF"/>
+                <constraint firstItem="ylH-nG-GQl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="OBs-tc-QHK"/>
+                <constraint firstItem="Rkc-OP-8Zu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="17" id="OXm-H1-oiB"/>
+                <constraint firstItem="Rkc-OP-8Zu" firstAttribute="top" secondItem="ylH-nG-GQl" secondAttribute="bottom" constant="8" id="arn-Ec-94D"/>
+                <constraint firstItem="RRo-Hi-QAW" firstAttribute="top" secondItem="Rkc-OP-8Zu" secondAttribute="bottom" constant="20" id="pb4-JU-nfl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Vy-AA-U8d" secondAttribute="trailing" constant="15" id="t18-PU-oju"/>
+                <constraint firstItem="9Vy-AA-U8d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="17" id="vUa-Wa-8th"/>
+                <constraint firstItem="9Vy-AA-U8d" firstAttribute="trailing" secondItem="RRo-Hi-QAW" secondAttribute="trailing" id="x8I-z4-bk1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="136.80000000000001" y="141.67916041979012"/>
+        </view>
+    </objects>
+</document>
