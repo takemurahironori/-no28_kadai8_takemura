@@ -1,0 +1,1 @@
+# -no28_kadai8_takemura
